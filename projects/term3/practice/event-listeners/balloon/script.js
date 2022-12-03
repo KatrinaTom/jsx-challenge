@@ -22,7 +22,7 @@ function handlePress(event) {
     if(key === "Enter") {
         // Enter blows up the balloon        
         // if the size gets bigger than 200, blow up
-        if(currentSize > 200) {
+        if(currentSize > 100) {
             balloon.textContent =  "💥"
             balloon.style.fontSize = "100px"
             window.removeEventListener("keypress", handlePress)
@@ -33,11 +33,18 @@ function handlePress(event) {
             balloon.style.fontSize = sizeString
         }
     }
-    else {  // key is Space 
+     else  { // key is Space
         // Space key deflates the balloon
-        let sizeString = `${currentSize *.9}px`
-        console.log("deflating to ", sizeString)
-        balloon.style.fontSize = sizeString    
+        if (currentSize <= 5) {
+            balloon.textContent =  "🌺"
+            balloon.style.fontSize = "100px"
+            window.removeEventListener("keypress", handlePress)
+        }
+        else {
+            let sizeString = `${currentSize *.9}px`
+            console.log("deflating to ", sizeString)
+            balloon.style.fontSize = sizeString      
+        }
     }
 }
 

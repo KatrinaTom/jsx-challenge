@@ -5,6 +5,12 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <title>Balloon</title>
         <style>
+            p {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
             #container {
                 display: flex;
                 flex-wrap: wrap;
@@ -17,9 +23,11 @@
         </style>
     </head>
     <body>
+        <p>The "Enter" key blows up the balloon. See how large the button can get before it explodes.</p>
         <div id="container">
             <p id="balloon">🎈</p>    
         </div>
+        <p>The "Space Bar" deflates the balloon. See how small it can get.</p>
         
         <script src="script.js">    
         </script>
