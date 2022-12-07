@@ -68,6 +68,7 @@ const App = () => {
             </Section>
             <footer>
             <h5>Thanks for visiting my profile. Hope to here from you soon!</h5>
+            <p>Practice Challenge Completed 7 Dec 2022 - Katrina Tomaszczyk</p>
         </footer>
         </>
     )
